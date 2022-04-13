@@ -20,12 +20,12 @@ module.exports = {
                 .setTimestamp()
                 .setThumbnail(client.user.displayAvatarURL())
                 .setTitle(client.user.username)
-                .setFooter({ text: 'Music Bot Commands - by Umut Bayraktar ❤️', iconURL:message.author.avatarURL({ dynamic: true }) })
+                .setFooter({ text: 'Music Bot Commands - RaykujanK13 ', iconURL:message.author.avatarURL({ dynamic: true }) })
                 .setDescription(`**
             > Guilds: \`${client.guilds.cache.size}\`
             > Users: \`${Math.ceil(client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString("tr-TR"))}.000\`
             > Channels: \`${client.channels.cache.size}\`**`)
-                .addField("Invite Bot", `**[Add Me](https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=1084516334400)**` ,true)
+            .addField("Github", `**[RaykujanK13](https://github.com/Rimba5446)**` ,true)
                 message.channel.send({embeds:[embed], components:[button]}).then(async Message => {
                     
                     const filter = i =>  i.user.id === message.author.id
@@ -41,12 +41,12 @@ module.exports = {
                         .setTimestamp()
                         .setThumbnail(client.user.displayAvatarURL())
                         .setTitle(client.user.username)
-                        .setFooter({ text: 'Music Bot Commands - by Umut Bayraktar ❤️', iconURL:message.author.avatarURL({ dynamic: true }) })
+                        .setFooter({ text: 'Music Bot Commands - by RaykujanK13', iconURL:message.author.avatarURL({ dynamic: true }) })
                         .setDescription(`**
             > Guilds: \`${client.guilds.cache.size}\`
             > Users: \`${Math.ceil(client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString("tr-TR"))}.000\`
             > Channels: \`${client.channels.cache.size}\`**`)
-                        .addField("Invite Bot", `**[Add Me](https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=1084516334400)**` ,true)
+                        //.addField("Invite Bot", `**[Add Me](https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=1084516334400)**` ,true)
                               
                         await Message.edit({embeds: [embedd]})
                         button.reply({content: "> **✅ Success:** Bot statistics updated!", ephemeral: true}).catch(e => { });
@@ -80,12 +80,12 @@ module.exports = {
                         .setTimestamp()
                         .setThumbnail(client.user.displayAvatarURL())
                         .setTitle(client.user.username + " Command Time Ended")
-                        .setFooter({ text: 'Music Bot Commands - by Umut Bayraktar ❤️', iconURL:message.author.avatarURL({ dynamic: true }) })
+                        .setFooter({ text: 'Music Bot Commands - by RaykujanK13', iconURL:message.author.avatarURL({ dynamic: true }) })
                         .setDescription(`**
             > Guilds: \`${client.guilds.cache.size}\`
             > Users: \`${Math.ceil(client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString("tr-TR"))}.000\`
             > Channels: \`${client.channels.cache.size}\`**`)
-                        .addField("Invite Bot", `**[Add Me](https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=1084516334400)**` ,true)
+                        .addField("Github", `**[RaykujanK13](https://github.com/Rimba5446)**` ,true)
                               
                         await Message.edit({embeds: [embedd], components:[button]})
                     })

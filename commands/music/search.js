@@ -32,7 +32,7 @@ if (!args[0]) return message.channel.send({ content: `${message.author}, Please 
         embed.setDescription(`${maxTracks.map((track, i) => `**${i + 1}**. ${track.title} | ${track.author}`).join('\n')}\n\nChoose a song from **1** to **${maxTracks.length}** write send or write **cancel** and cancel selection.⬇️`);
 
         embed.setTimestamp();
-        embed.setFooter({ text: 'by Umut Bayraktar ❤️', iconURL: message.author.avatarURL({ dynamic: true }) });
+        embed.setFooter({ text: 'by RaykujanK13', iconURL: message.author.avatarURL({ dynamic: true }) });
 
         message.channel.send({ embeds: [embed] });
 

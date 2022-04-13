@@ -20,7 +20,7 @@ module.exports = {
   .addField(`Saved Server`, `\`${message.guild.name}\``)
   .addField(`Requested By`, `${queue.current.requestedBy}`)
   .setTimestamp()
-  .setFooter({ text: 'Music Bot Commands - by Umut Bayraktar ❤️', iconURL: message.author.avatarURL({ dynamic: true }) });
+  .setFooter({ text: 'Music Bot Commands - by RaykujanK13', iconURL: message.author.avatarURL({ dynamic: true }) });
   message.author.send({ embeds: [embed] }).then(() => {
             message.channel.send({ content: `I sent the name of the music via private message. ✅` });
         }).catch(error => {
