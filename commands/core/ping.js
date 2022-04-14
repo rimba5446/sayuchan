@@ -15,7 +15,7 @@ module.exports = {
                 .addField(`Message Latency`, `\`${m.createdTimestamp - start}ms\` 🛰️`)
                 .addField(`API Latency`, `\`${Math.round(client.ws.ping)}ms\` 🛰️`)
                 .setTimestamp()
-                .setFooter({ text: 'Music Bot Commands - by Umut Bayraktar ❤️', iconURL: message.author.avatarURL({ dynamic: true }) });
+                .setFooter({ text: 'Music Bot Commands - by RaykujanK13', iconURL: message.author.avatarURL({ dynamic: true }) });
             m.edit({ embeds: [embed] });
         })
     },
