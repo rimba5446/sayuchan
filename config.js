@@ -1,7 +1,7 @@
 module.exports = {
-        TOKEN: 'ODY1NDgzOTI5NjEwODc5MDI2.YPEquA.J_AG4PPb8-cmBBGGosuR6M2A9mg', //write your discord bot token
+        TOKEN: 'ODY1NDgzOTI5NjEwODc5MDI2.YPEquA.iMoqx-8PtU-OgnLAC6vwl20se6k', //write your discord bot token
         px: '/s',
-        playing: 'Sayu Chan Musin Bot',
+        Listening: '/s help',
 
     opt: {
         DJ: {
