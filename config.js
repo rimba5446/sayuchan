@@ -1,20 +1,17 @@
 module.exports = {
-        TOKEN: 'OTg0NzUzNDg2NDE3NzY0MzYy.G_RHSB.jgsaWR8KYVGUgUJ29GGcHHy36U536rZ999_t2I',
-        applicationID:'984753486417764362',
-        pubkey:'16bea63ed2ef97458c1f201d70de2bb152aa6d062749ba27c8025f7a77c7cc7f',
-        guildid:'',
+        TOKEN: '', //write your discord bot token
         px: 's',
         PLAYING: 's help',
 
     opt: {
         DJ: {
             enabled: false, 
-            roleName: 'DJ', 
-            commands: ['back', 'clear', 'filter', 'loop', 'pause', 'resume', 'skip', 'stop', 'volume'] 
+            roleName: 'DJ', //WRITE WHAT THE NAME OF THE DJ ROLE WILL BE, THEY CAN USE IT ON YOUR SERVER
+            commands: ['back', 'clear', 'filter', 'loop', 'pause', 'resume', 'skip', 'stop', 'volume'] //Please don't touch
         },
-        selfDeaf: false, 
+        selfDeaf: false, //IF YOU WANT TO DEAF THE BOT, set false to true.
         maxVol: 100, 
-        loopMessage: false, 
+        loopMessage: false, //Please don't touch
         discordPlayer: {
             ytdlOptions: {
                 quality: 'highestaudio', 
