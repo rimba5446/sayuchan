@@ -17,7 +17,7 @@ module.exports = (client, int) => {
           .addField(`Saved Server`, `\`${int.guild.name}\``)
           .addField(`Requested By`, `${queue.current.requestedBy}`)
           .setTimestamp()
-          .setFooter({ text: 'Music Bot Commands - by Umut Bayraktar ❤️', iconURL: int.user.displayAvatarURL({ dynamic: true }) });
+          .setFooter({ text: 'Music Bot Commands RaykujanK13', iconURL: int.user.displayAvatarURL({ dynamic: true }) });
           int.member.send({ embeds: [embed] }).then(() => {
                 return int.reply({ content: `I sent you the name of the music in a private message ✅`, ephemeral: true, components: [] });
             }).catch(error => {

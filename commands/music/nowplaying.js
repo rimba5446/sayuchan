@@ -27,7 +27,7 @@ const trackDuration = timestamp.progress == 'Forever' ? 'Endless (Live)' : track
         embed.setDescription(`Audio **%${queue.volume}**\nDuration **${trackDuration}**\nURL: ${track.url}\nLoop Mode **${methods[queue.repeatMode]}**\n${track. requestedBy}`);
 
         embed.setTimestamp();
-        embed.setFooter({ text: 'by RaykujanK13', iconURL: message.author.avatarURL({ dynamic: true }) });
+        embed.setFooter({ text: 'Music Bot Commands By RaykujanK13', iconURL: message.author.avatarURL({ dynamic: true }) });
 
         const saveButton = new MessageButton();
 

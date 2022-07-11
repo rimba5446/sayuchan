@@ -1,6 +1,9 @@
 const { Player } = require('discord-player');
 const { Client, Intents, Collection } = require('discord.js');
 const { readdirSync } = require('fs');
+const { SlashCreator, GatewayServer } = require('slash-create');
+const { registerPlayerEvents } = require('./sayuplayer');
+const path = require('path');
 
 let client = new Client({
     intents: [
@@ -34,28 +37,36 @@ readdirSync('./commands/').forEach(dirs => {
     };
 });
 
+client.player = new Player(client);
+registerPlayerEvents(client.player);
 
-player.on('trackStart', (queue, track) => {
-    if (!client.config.opt.loopMessage && queue.repeatMode !== 0) return;
-    queue.metadata.send({ content: `🎵 Music started playing: **${track.title}** -> Channel: **${queue.connection.channel.name}** 🎧` });
+const creator = new SlashCreator({
+    applicationID: process.env.DISCORD_CLIENT_ID,
+    token: process.env.DISCORD_CLIENT_TOKEN,
 });
 
-player.on('trackAdd', (queue, track) => {
-    queue.metadata.send({ content: `**${track.title}** added to playlist. ✅` });
-});
 
-player.on('botDisconnect', (queue) => {
-    queue.metadata.send({ content: 'Someone from the audio channel Im connected to kicked me out, the whole playlist has been cleared! ❌' });
-});
+creator
+    .withServer(
+        new GatewayServer(
+            (handler) => client.ws.on('INTERACTION_CREATE', handler)
+        )
+    )
+    .registerCommandsIn(path.join(__dirname, 'slashcommands'));
 
-player.on('channelEmpty', (queue) => {
-    queue.metadata.send({ content: 'I left the audio channel because there is no one on my audio channel. ❌' });
-});
+//Client Events 2 
 
-player.on('queueEnd', (queue) => {
-    queue.metadata.send({ content: 'All play queue finished, I think you can listen to some more music. ✅' });
-});
+client.on("ready", async () => {
+    console.log(`${client.user.username} Ready!`);
+    
+    client.user
+    //   .setActivity(`Guilds : ${await client.guilds.cache.size} | r/help | r/about | r/invite |`, { type: "PLAYING" })
+      .setActivity(`Sayuchan shelp`, { type: "PLAYING" })
+      .catch(error => console.log(error));
+  });
 
+if (process.env.DISCORD_GUILD_ID) creator.syncCommandsIn(process.env.DISCORD_GUILD_ID);
+else creator.syncCommands();
 
 
 if(client.config.TOKEN){
@@ -65,3 +76,8 @@ console.log("The Bot Token You Entered Into Your Project Is Incorrect Or Your Bo
 } else {
 console.log("Please Write Your Bot Token Opposite The Token In The config.js File In Your Project!")
 }
+
+module.exports = {
+    client,
+    creator
+};

@@ -1,21 +1,24 @@
 module.exports = {
-        TOKEN: 'ODY1NDgzOTI5NjEwODc5MDI2.YPEquA.iMoqx-8PtU-OgnLAC6vwl20se6k', //write your discord bot token
+        TOKEN: 'OTg0NzUzNDg2NDE3NzY0MzYy.G_RHSB.jgsaWR8KYVGUgUJ29GGcHHy36U536rZ999_t2I',
+        applicationID:'984753486417764362',
+        pubkey:'16bea63ed2ef97458c1f201d70de2bb152aa6d062749ba27c8025f7a77c7cc7f',
+        guildid:'',
         px: 's',
         PLAYING: 's help',
 
     opt: {
         DJ: {
-            enabled: false, //IF YOU WANT ONLY DJS TO USE IT, set false to true.
-            roleName: 'DJ', //WRITE WHAT THE NAME OF THE DJ ROLE WILL BE, THEY CAN USE IT ON YOUR SERVER
-            commands: ['back', 'clear', 'filter', 'loop', 'pause', 'resume', 'skip', 'stop', 'volume'] //Please don't touch
+            enabled: false, 
+            roleName: 'DJ', 
+            commands: ['back', 'clear', 'filter', 'loop', 'pause', 'resume', 'skip', 'stop', 'volume'] 
         },
-        selfDeaf: false, //IF YOU WANT TO DEAF THE BOT, set false to true.
-        maxVol: 100, //You can specify the maximum volume level.
-        loopMessage: false, //Please don't touch
+        selfDeaf: false, 
+        maxVol: 100, 
+        loopMessage: false, 
         discordPlayer: {
             ytdlOptions: {
-                quality: 'highestaudio', //Please don't touch
-                highWaterMark: 1 << 25 //Please don't touch
+                quality: 'highestaudio', 
+                highWaterMark: 1 << 25 
             }
         }
     }
