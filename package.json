@@ -17,7 +17,6 @@
     "slash-create": "^5.7.0",
     "path": "^0.12.7",
     "@discord-player/extractor": "^3.0.2",
-    "@discord-player/downloader": "^3.0.1",
     "dotenv": "^16.0.1",
     "ffmpeg": "^0.0.4",
     "ytdl-core": "^4.11.0"
