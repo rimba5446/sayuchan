@@ -41,8 +41,8 @@ client.player = new Player(client);
 registerPlayerEvents(client.player);
 
 const creator = new SlashCreator({
-    applicationID: process.env.DISCORD_CLIENT_ID,
-    token: process.env.DISCORD_CLIENT_TOKEN,
+    applicationID: client.config.clientid,
+    token: client.config.TOKEN,
 });
 
 
@@ -62,7 +62,6 @@ client.on("ready", async () => {
     client.user
     //   .setActivity(`Guilds : ${await client.guilds.cache.size} | r/help | r/about | r/invite |`, { type: "PLAYING" })
       .setActivity(`Sayuchan shelp`, { type: "PLAYING" })
-      .catch(error => console.log(error));
   });
 
 if (process.env.DISCORD_GUILD_ID) creator.syncCommandsIn(process.env.DISCORD_GUILD_ID);
