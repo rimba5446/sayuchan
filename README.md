@@ -30,3 +30,5 @@ module.exports = class extends SlashCommand {
     }
 
 ```
+
+[![Discord](https://cdn.discordapp.com/attachments/983355485384216626/999992636796583956/logobanner.png)]
